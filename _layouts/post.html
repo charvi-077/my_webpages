@@ -12,6 +12,26 @@ layout: default
   <div class="date">
     Written on {{ page.date | date: "%B %e, %Y" }}
   </div>
+  <br> 
+  <hr color="#D4D1D6" NOSHADE>
 
+  <div class="Previous-next">
+  {% if page.previous.url %}
+    <a class="previous" href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a>
+  {% endif %}
+  {% if page.next.url %}
+    <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
+  {% endif %}
+</div>
+
+<div>
   {% include disqus.html %}
+<script src="https://apis.google.com/js/plusone.js">
+</script>
+<div class="g-comments"
+  data-href="{{ site.url }}{{ page.url }}"
+  data-width="600"
+  data-first_party_property="BLOGGER"
+  data-view_type="FILTERED_POSTMOD">
+</div>
 </article>

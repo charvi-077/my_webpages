@@ -325,6 +325,10 @@ nav a {
   background-color: #eee;
 }
 
+.next {
+  float: right;
+}
+
 footer {
   padding: 20px 0;
   text-align: center;
