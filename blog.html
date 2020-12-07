@@ -11,7 +11,6 @@ permalink: /blog/
 
   {% for post in site.posts %}
     <article class="post">
-
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
@@ -19,6 +18,10 @@ permalink: /blog/
       </div>
 
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <div class="date">
+        Written on {{ post.date | date: "%B %e, %Y" }}
+      </div>
+
     </article>
 
   {% endfor %}
