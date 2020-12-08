@@ -31,7 +31,7 @@ Then I started learning about the test scripts in the patches and debugged it. A
 Also, I learned about the `t/lib-rebase.sh` where more helper functions are defined, which are used in writing the tests for the interactive rebase and learned about the `set_fake_editor()` function for setting up the fake editor while writing the test scripts.
 
 ### Next Plans
-I will continue to work on test script, complete tests mentioned in the patches and will look more into the patches, for further changes.
+I will continue to work on test script, complete tests mentioned in the patches and as guided by Phillip, will look into the code for changing new `amend` command in the todo list to using `fixup -C` instead.
 
 Thanks.
  

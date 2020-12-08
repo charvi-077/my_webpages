@@ -23,15 +23,9 @@ layout: default
     <a class="next" href="{{page.next.url}}">{{page.next.title}} &raquo;</a>
   {% endif %}
 </div>
+<br>
+<br>
+{% include disqus.html %}
 
-<!--{% include disqus.html %}-->
-<script src="https://apis.google.com/js/plusone.js">
-</script>
-<div class="g-comments"
-  data-href="{{ site.url }}{{ page.url }}"
-  data-width="600"
-  data-first_party_property="BLOGGER"
-  data-view_type="FILTERED_POSTMOD">
-</div>
 
 </article>
