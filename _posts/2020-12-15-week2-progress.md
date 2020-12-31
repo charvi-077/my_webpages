@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week2 - Updates
+title: Week 2 - Updates
 ---
 Working on `git` using `git`. And it's true that we can't just avoid the `conflicts`. Although, `git` makes the merging or integration of code from different branches very easy and handles itself but there are many situations in which it results in merge conflicts and at that time it is required to be solved manually. 
 
