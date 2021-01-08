@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 3 & 4 - Digging into interactive rebase codebase – Charvi Mendiratta – Robotics|Programming|OpenSource</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="I started with, finding the answers of what happens when we run git rebase -i ? How does the code work after we edit the git-rebase-todo ?
+" />
+    <meta property="og:description" content="I started with, finding the answers of what happens when we run git rebase -i ? How does the code work after we edit the git-rebase-todo ?
+" />
+    
+    <meta name="author" content="Charvi Mendiratta" />
+
+    
+    <meta property="og:title" content="Week 3 & 4 - Digging into interactive rebase codebase" />
+    <meta property="twitter:title" content="Week 3 & 4 - Digging into interactive rebase codebase" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Charvi Mendiratta - Robotics|Programming|OpenSource" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://raw.githubusercontent.com/charvi-077/charvi-077.github.io/master/images/charvi.jpeg" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Charvi Mendiratta</a></h1>
+            <p class="site-description">Robotics|Programming|OpenSource</p>
+          </div>
+
+          <nav>
+            <a href="/blog/">Blog</a>
+            <a href="/about">About</a>
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Week 3 & 4 - Digging into interactive rebase codebase</h1>
+
+  <div class="entry">
+    <p>I started with, finding the answers of what happens when we run <code class="language-plaintext highlighter-rouge">git rebase -i</code> ? How does the code work after we edit the <code class="language-plaintext highlighter-rouge">git-rebase-todo</code> ?</p>
+
+<p>So, I spent some time navigating the code, looking into definitions and the data structures used in the codebase. And it becomes more easy after setting up proper keybindings in the <a href="https://code.visualstudio.com/">vscode</a>, using <a href="https://marketplace.visualstudio.com/items?itemName=jaydenlin.ctags-support">ctags</a> and <a href="https://www.gnu.org/software/gdb/">GDB</a>.</p>
+
+<p>As an overview, the very first entry point is <code class="language-plaintext highlighter-rouge">main()</code> function in <code class="language-plaintext highlighter-rouge">comman-main.c</code>, following the <code class="language-plaintext highlighter-rouge">cmd_main()</code> in <code class="language-plaintext highlighter-rouge">git.c</code>. Then in builtin folder, there is  <code class="language-plaintext highlighter-rouge">rebase.c</code> which consists the two functions <code class="language-plaintext highlighter-rouge">cmd_rebase()</code> and <code class="language-plaintext highlighter-rouge">cmd_rebase__interactive()</code> which are the entry points for the git rebase command which further calls <code class="language-plaintext highlighter-rouge">run_sequence_rebase()</code> and <code class="language-plaintext highlighter-rouge">sequencer_continue()</code>.</p>
+
+<p>Next, after discussing with Phillip and Christian more regarding the patches and codebase I learned about the <code class="language-plaintext highlighter-rouge">sequencer.c</code> codebase that handles the working of git-rebase-todo, where entry point is <code class="language-plaintext highlighter-rouge">sequencer_continue()</code>, which calls <code class="language-plaintext highlighter-rouge">read_populate_todo()</code> to read the todo list and then calls <code class="language-plaintext highlighter-rouge">pick_commits()</code> to pick the commits, <code class="language-plaintext highlighter-rouge">pick_commits()</code> then loops through the todo list and picks each commit by calling <code class="language-plaintext highlighter-rouge">do_pick_commit()</code>.</p>
+
+<h2 id="progress">Progress</h2>
+
+<p>As started earlier, I completed the modifications in the test scripts as <a href="https://github.com/charvi-077/git/commits/amend-patches/test-script-v6">here</a>, but it still need to be changed simultaneously with the changes in the Phillip’s patches.
+Next, after poking around the codebase I started working on changing the amend patches as <a href="https://github.com/charvi-077/git/commits/amend-patches/fixup">here</a>. So, I removed the amend command from the current Phillip’s patches and added the options to the fixup command in the interactive rebase.
+And changing pick command to the respective one, will work as described below:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">fixup</code>, work like squash but remove this commits log</li>
+  <li><code class="language-plaintext highlighter-rouge">fixup -C</code>, work like squash but replace above commit’s message with this commit message.</li>
+  <li><code class="language-plaintext highlighter-rouge">fixup -c</code>, work like squash, replace above commit’s message with   this commit and also open the editor to edit.</li>
+</ul>
+
+<h4 id="points-to-consider">Points to consider:</h4>
+<ul>
+  <li>run interactive rebase with <a href="https://jnielson.com/git-rebase-with-merges"><code class="language-plaintext highlighter-rouge">--rebase-merges</code></a>, in order to save your merge commits</li>
+  <li><code class="language-plaintext highlighter-rouge">.git directory</code>, that stores all the information</li>
+  <li>look around the <a href="https://schacon.github.io/git/technical/api-strbuf.html">strbuf API</a></li>
+  <li>git supports so many languages, look around <a href="https://www.gnu.org/software/gettext/">gettext</a></li>
+</ul>
+
+<h2 id="todo">TODO</h2>
+<p>I will complete the modifications required in the patches as guided by Christian, which is in <a href="https://github.com/charvi-077/git/commits/amend-patches/fixup">progress</a>. Next, I need to look into its working if the commit messages are empty and will also complete the changes in the test script in accordance with the fixup command options in interactive rebase.</p>
+
+<p>PS: Last week I worked less, but will try to speed up and send the patch series to the mailing list asap.</p>
+
+<p>Thanks &amp;
+Happy New Year, 2k21</p>
+
+
+  </div>
+
+  <div class="date">
+    Written on December 31, 2020
+  </div>
+  <br> 
+  <hr color="#D4D1D6" NOSHADE>
+
+  <div class="Previous-next">
+  
+    <a class="previous" href="/week2-progress/">&laquo; Week 2 - Updates</a>
+  
+  
+    <a class="next" href="/week5-progress/">Week 5 - Patches for adding options to the fixup command. &raquo;</a>
+  
+</div>
+<br>
+<br>
+<!--
+
+-->
+
+<div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://charvi077.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:charvi077@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/charvi-077"><i class="svg-icon github"></i></a>
+
+<a href="https://www.linkedin.com/in/charvi077"><i class="svg-icon linkedin"></i></a>
+
+<a href="/feed.xml"><i class="svg-icon rss"></i></a>
+<a href="https://www.twitter.com/charvi077"><i class="svg-icon twitter"></i></a>
+
+<a href="https://youtube.com/channel/UCXzqunUE_qv8Bg-MHE8j77Q?view_as=subscriber"><i class="svg-icon youtube"></i></a>
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
