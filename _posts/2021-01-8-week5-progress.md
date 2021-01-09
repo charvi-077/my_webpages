@@ -13,9 +13,9 @@ Next, as guided by Christian I also split some commits and added those changes i
 
 Then after doing all the changes in the code base, tests and documentation one of the important steps before sending the patches to the mailing list, is to write the `cover letter` explaining the reason and use of patches, wrote that and did the changes as guided by Christian and Phillip.
 
-#### Points to consider:
+#### Git commands for preparing patches:
 - [`git format-patch`](https://devconnected.com/how-to-create-and-apply-git-patch-files/), for preparing patches for email submission and include --cover-letter for adding the cover letter.
-- `git send-email`, for sending a collection of patches as email instead of pull requests and setting up `gmail` as the smtp server as [here](https://riptutorial.com/git/example/16977/use-git-send-email-with-gmail).
+- [`git send-email`](https://riptutorial.com/git/example/16977/use-git-send-email-with-gmail), for sending a collection of patches as email instead of pull requests and setting up `gmail` as the smtp server.
 - [`git am`](https://devconnected.com/how-to-create-and-apply-git-patch-files/), for applying a series of patches from mailbox and its good practise to test and apply patches locally before sending it to the mailing list.
 
 ## Patch series sent :
