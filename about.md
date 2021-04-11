@@ -5,10 +5,12 @@ permalink: /about/
 ---
 
 
-> I am recently graduated from Electronics and Communication, Panjab University, India. I love programming robots and believe in solving real world problems with new technologies. Earlier, I also worked as Robotics Software Intern. I learn and explore new things in my day to day life.
-
-
-> Currently I am doing [Outreachy](https://www.outreachy.org/) Internship with [Git](https://git-scm.com/), working on the project "Implement reword! and drop! commits in git interactive rebase". 
-
-
-> I spend my free time reading books, listening music and exploring nature. Feel free to contact me through my social links.
+> Hi, I graduated from Electronics and Communication, Panjab University, India. I love programming robots and believe in solving real world problems with new technologies. Earlier, I also worked as a Robotics Software Intern. I have experience with the mobile robots and have worked majorly on the SLAM, Navigation and localization algorithms using ROS. I learn and explore new things in my day to day life.
+ 
+ 
+> I am self-taught programmer and recently completed [Outreachy](https://www.outreachy.org/) Internship with [Git](https://git-scm.com/), where I worked on enhancing the git interactive rebase and adding the new feature of amend! and reword! commits to it and further continuing as an Open source contributor. I am open to the Software Developer or Robotics Engineer roles. Please do check out my [Resume](https://drive.google.com/file/d/1MbOjtuIjxLelFJrux7Cm72oUAOQTgoQM/view).
+ 
+ 
+> Besides, I spend my free time reading books, listening to music and exploring nature. Also, I would always be happy to meet new people all around. Feel free to contact me through my social links.
+ 
+ 
