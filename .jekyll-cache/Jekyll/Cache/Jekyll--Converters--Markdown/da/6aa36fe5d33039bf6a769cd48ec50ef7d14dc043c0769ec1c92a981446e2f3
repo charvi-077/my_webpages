@@ -1,0 +1,10 @@
+I"�<h2 id="updates-">Updates :</h2>
+<ul>
+  <li>All patches got merged into the main codebase. The work could be traced as here : <a href="https://github.com/git/git/commits?author=charvi-077">Merged Patches </a></li>
+  <li>The new feature got released in Git revision 2.33 , see the detailed usuage as here : <a href="https://github.blog/2021-08-16-highlights-from-git-2-33/">Skip to new –fixup options : amend and reword</a></li>
+  <li>Checkout our blog post of Outreachy Interenship Experiences : <a href="https://about.gitlab.com/blog/2021/04/15/outreachy-sponsorship-winter-2020/?utm_medium=social&amp;utm_source=twitter&amp;utm_campaign=blog">“Technology internships meet open source in Outreachy”</a></li>
+</ul>
+
+<p>My Outreachy internship at Git over the past three months was an amazing experience. Thanks to my mentors Christian Couder and Phillip Wood, I learned a lot throughout my internship,  deepened my technical skills in Git, improved problem-solving abilities, and also learned the importance of effective collaboration. I am grateful for the supportive Git community, I look forward to applying these skills in my future endeavors.</p>
+
+:ET
