@@ -5,15 +5,14 @@ permalink: /about/
 ---
 
 
-> Hi, 
+> Hi! I’m Charvi Mendiratta, a software engineer and researcher with a deep interest in robotics, computer vision, and AI systems designed for real-world impact.
 
-> I am Research Associate at Robotics Research Center, IIIT Hyderabad. I am working on Drone based civil structure assessment under the guidance of [Prof. Harikumar Kandath](https://sites.google.com/view/harikumar-kandath/home) and [Prof. Ravi Kiran Sarvadevabhatla](https://ravika.github.io/). My research areas lies at intersection of Robotics, Computer Vision, and Deep Learning. 
+> Currently, I’m pursuing my Master’s in Electrical and Computer Engineering at UC Santa Barbara, specializing in signal processing and machine learning. I'm also contributing to the [BisQue](https://github.com/UCSB-VRL/bisqueUCSB) Project at the [Vision Research Lab](https://vision.ece.ucsb.edu/), where I’m helping build a scalable, containerized platform for image analysis tasks like classification, segmentation, and small object detection—particularly in challenging datasets like wildlife aerial imagery.
 
-> I love programming robots and believe in solving real world problems with new technologies. Previously, I also worked as a Robotics Software Engineer at [Flux Auto](https://fluxauto.xyz/) (2021 - 2023) and [Black Coffee Robotics](https://www.blackcoffeerobotics.com/) (2020). I have experience with the mobile robots and have worked majorly on the SLAM, Navigation and localization algorithms. I learn and explore new things in my day to day life.
- 
-> I am self-taught programmer, part of open source community and had also successfully completed my [Outreachy](https://www.outreachy.org/) Internship with [Git](https://git-scm.com/), where I worked on enhancing the git interactive rebase and adding the new feature of amend! and reword! commits to it.
+> Previously, I worked as a Robotics Software Engineer at [Flux Auto](https://fluxauto.ai/), where I focused on 3D LiDAR-based SLAM, dynamic obstacle tracking, and real-time map generation for autonomous warehouse vehicles. My experience also spans research roles at [RRC, IIIT Hyderabad](https://robotics.iiit.ac.in/) and [Panjab University](), where I worked on vision pipelines for civil infrastructure assessment and ecological monitoring systems.
 
- 
-> Besides, I spend my free time reading books, listening to music and exploring nature. Also, I would always be happy to meet new people all around. Feel free to contact me through my social links.
- 
- 
+> Beyond engineering, I’ve contributed to open source through an Outreachy internship with Git, and I’m a proud recipient of the ROSCON Diversity Scholarship and Smart India Hackathon Winner.
+
+> Whether it’s building scalable AI pipelines, solving complex robotics problems, or collaborating on research-driven initiatives, I love bridging the gap between theory and impactful technology.
+
+> Let’s connect if you’re working on exciting problems in AI, robotics, or vision systems!
