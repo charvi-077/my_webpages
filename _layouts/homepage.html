@@ -1,0 +1,184 @@
+---
+layout: archive
+---
+
+{{ content }}
+
+<div class="author-profile">
+  <div class="author-content">
+    {% if site.author.avatar %}
+      <div class="author-avatar">
+        <img src="{{ site.author.avatar | relative_url }}" alt="{{ site.author.name }}" class="author__avatar">
+      </div>
+    {% endif %}
+    
+    <div class="author-bio">
+      <h1 class="author-name">{{ site.author.name | default: site.name }}</h1>
+      {% if site.author.bio %}
+        <p class="author-bio-text">{{ site.author.bio }}</p>
+      {% endif %}
+      
+      {% if site.author.location %}
+        <p class="author-location">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i> {{ site.author.location }}
+        </p>
+      {% endif %}
+      
+      {% if site.author.email %}
+        <p class="author-email">
+          <i class="fas fa-envelope" aria-hidden="true"></i> 
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        </p>
+      {% endif %}
+    </div>
+  </div>
+  
+  {% if site.author.links %}
+    <div class="author-social">
+      <h3>Connect with me:</h3>
+      <ul class="author-social-links">
+        {% for link in site.author.links %}
+          {% if link.url %}
+            <li>
+              <a href="{{ link.url }}" rel="nofollow noopener noreferrer">
+                <i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i>
+                <span class="label">{{ link.label }}</span>
+              </a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</div>
+
+<div class="home-recent-posts">
+  <h2>Latest Posts</h2>
+  <div class="entries-list">
+    {% for post in site.posts limit:3 %}
+      {% include archive-single.html type="list" %}
+    {% endfor %}
+  </div>
+  <p class="text-center">
+    <a href="{{ '/blog/' | relative_url }}" class="btn btn--primary">View All Posts</a>
+  </p>
+</div>
+
+<style>
+.author-profile {
+  margin-bottom: 2em;
+  padding: 2em;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.author-content {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  margin-bottom: 1.5em;
+}
+
+.author-avatar {
+  flex-shrink: 0;
+}
+
+.author__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.author-bio {
+  flex: 1;
+}
+
+.author-name {
+  margin: 0 0 0.5em 0;
+  font-size: 2.5em;
+  line-height: 1.2;
+  color: #333;
+}
+
+.author-bio-text {
+  font-size: 1.2em;
+  margin: 0 0 1em 0;
+  color: #666;
+  line-height: 1.4;
+}
+
+.author-location,
+.author-email {
+  margin: 0.5em 0;
+  color: #777;
+}
+
+.author-location i,
+.author-email i {
+  margin-right: 0.5em;
+  width: 16px;
+}
+
+.author-social h3 {
+  margin: 0 0 1em 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.author-social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.author-social-links li a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.5em 1em;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+.author-social-links li a:hover {
+  background: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.home-recent-posts {
+  margin-top: 3em;
+}
+
+.home-recent-posts h2 {
+  margin-bottom: 1.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid #eee;
+}
+
+@media (max-width: 768px) {
+  .author-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1em;
+  }
+  
+  .author-name {
+    font-size: 2em;
+  }
+  
+  .author-social-links {
+    justify-content: center;
+  }
+}
+</style>

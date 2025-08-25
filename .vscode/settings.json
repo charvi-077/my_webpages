@@ -1,0 +1,13 @@
+{
+  "[markdown]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": false
+    },
+    "editor.acceptSuggestionOnEnter": "on"
+  },
+  "editor.snippetSuggestions": "top",
+  "editor.tabCompletion": "on",
+  "livePreview.portNumber": 4000
+}
