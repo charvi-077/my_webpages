@@ -1,0 +1,45 @@
+/* Site-wide custom overrides (small, high-specificity rules)
+   Purpose: make the masthead / site title larger and bolder.
+*/
+
+/* High-specificity multi-selector ensures the title text is large and black
+   across masthead variants (masthead, greedy-nav, anchor-based title links). */
+.masthead .site-title,
+.site-title,
+nav.greedy-nav .site-title,
+nav.greedy-nav a.site-title,
+.site-title a {
+  /* Make the site title much more prominent */
+  font-size: 2rem !important;      /* mobile baseline */
+  font-weight: 900 !important;     /* heavier weight for strong emphasis */
+  line-height: 1.02 !important;
+  letter-spacing: -0.4px !important;
+  color: #333 !important;          /* slightly lighter black for softer appearance */
+  text-transform: none !important;
+}
+
+@media (min-width: 48rem) {
+  .masthead .site-title,
+  nav.greedy-nav .site-title,
+  .site-title,
+  .site-title a {
+    font-size: 3rem !important;    /* tablet and up */
+  }
+}
+
+@media (min-width: 80rem) {
+  .masthead .site-title,
+  nav.greedy-nav .site-title,
+  .site-title,
+  .site-title a {
+    font-size: 3.6rem !important;  /* large desktops */
+  }
+}
+
+/* Ensure pseudo-classes and visited state remain black */
+.site-title:link,
+.site-title:visited,
+.site-title:hover,
+.site-title:active {
+  color: #333 !important;
+}

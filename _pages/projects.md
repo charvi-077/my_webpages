@@ -3,6 +3,7 @@ layout: single
 permalink: /projects/
 title: "Projects"
 author_profile: false
+no_title_link: true
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/projects.css' | relative_url }}">
