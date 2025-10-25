@@ -1,0 +1,79 @@
+/* Projects page styles (moved from _pages/projects.md) */
+#more-papers { display: block; max-width: 1400px; margin: 0 auto; }
+.paper {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: nowrap; /* keep side-by-side when there is room */
+}
+.paper-visual {
+  /* Reduce visual width so text column gets more room (10% more reduction) */
+  flex: 0 0 40%; /* visuals take ~35% on desktop */
+  max-width: calc(100% - 240px); /* leave sufficient room for text */
+  min-width: 220px; /* allow visuals to shrink but keep readable */
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.paper-textual {
+  flex: 1 1 420px; /* larger base for text so lines wrap naturally */
+  min-width: 300px; /* readable minimum width */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* Remove top margins on headings/first child so text aligns with visual top */
+.paper-textual > *:first-child { margin-top: 0; }
+.paper-textual h1,
+.paper-textual h2,
+.paper-textual h3,
+.paper-textual h4 { margin-top: 0; }
+
+/* Keep the paper/code links on a single line */
+.paper-links { display: inline-flex; gap: 0.5rem; align-items: center; white-space: nowrap; }
+.paper-links a { text-decoration: underline; font-weight: 700; }
+.paper-links .sep { opacity: 0.9; margin: 0 0.25rem; }
+
+/* Ensure textual content doesn't force awkward breaks */
+.paper-textual { word-break: normal; }
+/* Use a real list (disc bullets) with minimal spacing */
+.paper-points { margin: 0 0 0.25rem 0; padding-left: 1.15em; /* indent for bullets */ }
+.paper-points li { margin: 0 0 0.15rem 0; line-height: 1.45; }
+
+/* medium screens: allow wrapping if there's not enough room */
+@media (max-width: 1100px) {
+  .paper { flex-wrap: wrap; }
+  .paper-visual { flex-basis: 100%; max-width: 100%; min-width: 0; }
+  .paper-textual { flex-basis: 100%; width: 100%; margin-top: 0.75rem; }
+}
+/* small screens: stacked layout */
+@media (max-width: 700px) {
+  .paper { flex-direction: column; }
+  .paper-visual { width: 100%; }
+}
+
+/* Expand the page content container on this page so projects can be wider
+   The theme may constrain .page__inner-wrap; increase specificity and use
+   !important to ensure this page overrides global rules. */
+article.page .page__inner-wrap {
+  max-width: 1400px !important;
+  width: 100% !important;
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+.page__content { max-width: none !important; }
+
+/* Override the theme's page sizing that reserves space for a right sidebar.
+   Make the page element full-width on this page. */
+article.page { float: none !important; width: 100% !important; padding-right: 0 !important; }
+
+/* Also remove any right padding applied at large breakpoints */
+@media (min-width: 1024px) { article.page { padding-right: 0 !important; } }
+
+/* Reduce paragraph spacing inside the textual column */
+.paper-textual p { margin: 0 0 0.15rem; line-height: 1.45; }
+
+/* Collapse small spacer divs used in the markup so spacing is minimal */
+.paper-textual > div[style] { height: 0 !important; margin: 0 !important; padding: 0 !important; }
+.paper-textual h3 { margin: 0 0 0.15rem; }

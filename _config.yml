@@ -231,6 +231,11 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+# Custom collections
+collections:
+  projects:
+    output: false
+
 # mimic GitHub Pages with --safe
 whitelist:
   - jekyll-paginate

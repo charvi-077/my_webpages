@@ -6,6 +6,8 @@ main:
     url: /blog/
   - title: "Tags"
     url: /posts/
+  - title: "Projects"
+    url: /projects/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

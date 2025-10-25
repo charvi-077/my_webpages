@@ -1,0 +1,47 @@
+{%- comment -%}
+Render projects from _data/projects.yml
+Each item expects: id, title, authors, venue, image, image_alt, paper, code, description OR points (array)
+{%- endcomment -%}
+
+<div id="more-papers-list">
+  {%- assign projects = site.projects | default: site.data.projects -%}
+  {%- for p in projects -%}
+    {%- assign data = p.data | default: p -%}
+    <div class="paper" id="project-{{ data.id | default: data.title | slugify }}">
+      <img class="paper-visual" src="{{ data.image | default: p.image | relative_url }}" alt="{{ data.image_alt | default: p.image_alt | escape }}">
+      <div class="paper-textual">
+        <h3>{{ data.title | default: p.title }}</h3>
+        {%- if data.authors or p.authors -%}
+          <div class="authors">{{ data.authors | default: p.authors }}</div>
+        {%- endif -%}
+        {%- if data.venue or p.venue -%}
+          <div class="venue" style="font-weight:450">{{ data.venue | default: p.venue }}</div>
+        {%- endif -%}
+        {%- if p.content and p.content != "" -%}
+          <div class="paper-desc">{{ p.content | markdownify }}</div>
+        {%- elsif data.description -%}
+          <div class="paper-desc">{{ data.description }}</div>
+        {%- endif -%}
+        {%- if data.points -%}
+          <ul class="paper-points">
+            {%- for pt in data.points -%}
+              <li>{{ pt }}</li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        <div class="paper-links">
+          {%- if data.paper or p.paper -%}
+            <a href="{{ data.paper | default: p.paper }}">Paper</a>
+          {%- endif -%}
+          {%- if (data.code or p.code) and (data.paper or p.paper) -%}
+            <span class="sep">/</span>
+          {%- endif -%}
+          {%- if data.code or p.code -%}
+            <a href="{{ data.code | default: p.code }}">Code</a>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+</div>
