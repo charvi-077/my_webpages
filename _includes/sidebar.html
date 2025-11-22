@@ -1,6 +1,6 @@
-{% if page.author_profile or layout.author_profile or page.sidebar %}
+{% unless page.hide_sidebar == true %}
   <div class="sidebar sticky">
-  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+  {% if (page.author_profile or layout.author_profile) and page.hide_author_profile != true and page.layout != 'archive' and page.layout != 'archive-taxonomy' %}{% include author-profile.html %}{% endif %}
   {% if page.sidebar %}
     {% for s in page.sidebar %}
       {% if s.image %}
@@ -17,4 +17,4 @@
   {% endif %}
   {% include nav_list %}
   </div>
-{% endif %}
+{% endunless %}

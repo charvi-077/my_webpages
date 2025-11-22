@@ -2,7 +2,8 @@
 title: "research / Audio and Speech Processing"
 permalink: /categories/research/ASP/
 layout: archive
-author_profile: true
+author_profile: false
+hide_author_profile: true
 ---
 
 {% assign posts = site.tags['Audio and Speech Processing'] %}

@@ -3,6 +3,7 @@ layout: single
 permalink: /projects/
 title: "Projects"
 author_profile: false
+hide_sidebar: true
 no_title_link: true
 ---
 

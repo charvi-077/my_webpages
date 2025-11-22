@@ -2,7 +2,8 @@
 title: "Reinforcement Learning"
 permalink: /categories/re-l/
 layout: archive
-author_profile: true
+author_profile: false
+hide_author_profile: true
 ---
 
 {% assign posts = site.tags['RL'] %}

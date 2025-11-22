@@ -2,7 +2,8 @@
 title: "3D Computer Vision"
 permalink: /categories/computer-vision/
 layout: archive
-author_profile: true
+author_profile: false
+hide_author_profile: true
 taxonomy: cv
 ---
 

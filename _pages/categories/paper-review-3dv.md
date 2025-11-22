@@ -2,7 +2,8 @@
 title: "research / 3D Vision"
 permalink: /categories/research/3DV/
 layout: archive
-author_profile: true
+author_profile: false
+hide_author_profile: true
 ---
 
 {% assign posts = site.tags['3D Vision'] %}
