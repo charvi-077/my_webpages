@@ -1,13 +1,13 @@
 ---
-title: "논문리뷰 / Reinforcement Learning"
-permalink: /categories/논문리뷰/RL/
+title: "Reinforcement Learning"
+permalink: /categories/re-l/
 layout: archive
 author_profile: true
 ---
 
-{% assign posts = site.tags['Reinforcement Learning'] %}
+{% assign posts = site.tags['RL'] %}
 {% for post in posts %} 
-    {% if post.url contains "%EB%85%BC%EB%AC%B8%EB%A6%AC%EB%B7%B0" %}
+    {% if post.url contains "rl" %}
         {% include archive-single.html type=page.entries_layout %}
     {% endif %}
 {% endfor %}

@@ -1,6 +1,6 @@
 ---
-title: "논문리뷰 / Audio and Speech Processing"
-permalink: /categories/논문리뷰/ASP/
+title: "research / Audio and Speech Processing"
+permalink: /categories/research/ASP/
 layout: archive
 author_profile: true
 ---

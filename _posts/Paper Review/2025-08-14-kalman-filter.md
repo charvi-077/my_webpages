@@ -2,6 +2,7 @@
 title: "Kalman Filter"
 last_modified_at: 2025-08-14-SAM
 categories:
+  - research
   - computer-vision
 tags:
   - Estimation
@@ -9,6 +10,7 @@ tags:
 excerpt: "If Kakao 2022에서 소개된 MFIM 논문 리뷰 (EVCA 2022)"
 use_math: true
 classes: wide
+published: false
 ---
 
 > Good tutorial links : [[Blog](https://www.kalmanfilter.net/background.html)]

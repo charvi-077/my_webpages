@@ -9,6 +9,7 @@ tags:
 excerpt: "If Kakao 2022에서 소개된 MFIM 논문 리뷰 (EVCA 2022)"
 use_math: true
 classes: wide
+published: false
 ---
 
 > Here I am listing all the references of the work of object detection in computer vision.  

@@ -1,6 +1,6 @@
 ---
-title: "논문리뷰 / Natural Language Processing (NLP)"
-permalink: /categories/논문리뷰/NLP/
+title: "Natural Language Processing (NLP)"
+permalink: /categories/NLP/
 layout: archive
 author_profile: true
 ---

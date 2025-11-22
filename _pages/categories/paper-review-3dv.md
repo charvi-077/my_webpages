@@ -1,6 +1,6 @@
 ---
-title: "논문리뷰 / 3D Vision"
-permalink: /categories/논문리뷰/3DV/
+title: "research / 3D Vision"
+permalink: /categories/research/3DV/
 layout: archive
 author_profile: true
 ---

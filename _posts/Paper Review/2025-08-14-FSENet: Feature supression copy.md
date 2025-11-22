@@ -2,6 +2,7 @@
 title: "FSENet: Feature suppression and enhancement network for tiny object detection"
 last_modified_at: 2025-08-14-SAM
 categories:
+  - research
   - computer-vision
 tags:
   - Object Detection
@@ -9,6 +10,7 @@ tags:
 excerpt: "If Kakao 2022에서 소개된 MFIM 논문 리뷰 (EVCA 2022)"
 use_math: true
 classes: wide
+published: false
 ---
 
 > [[Paper](https://doi.org/10.1016/j.patcog.2025.111425)]  
