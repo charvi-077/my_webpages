@@ -74,6 +74,81 @@ article.page { float: none !important; width: 100% !important; padding-right: 0 
 /* Reduce paragraph spacing inside the textual column */
 .paper-textual p { margin: 0 0 0.15rem; line-height: 1.45; }
 
+/* Make the textual column slightly smaller so project descriptions don't feel oversized.
+  Using rem keeps this proportional to the site's base font-size. */
+.paper-textual,
+.paper-textual p,
+.paper-textual li { font-size: 0.95rem; }
+
+/* Stronger override for project pages: target the page content wrapper and
+   the description block (.paper-desc). Use !important so this wins over the
+   theme's global typography rules and makes a visibly smaller change. */
+.page__content .paper-textual,
+.page__content .paper-textual p,
+.page__content .paper-textual li,
+.page__content .paper-textual .paper-desc,
+.paper-desc {
+  font-size: 0.9rem !important;
+  line-height: 1.35 !important;
+}
+
+/* Constrain media inside the visual area and description so videos/iframes
+   don't render oversized. Keep responsive: on narrow screens media is full
+   width, on wider screens cap height so text and visuals stay balanced. */
+.paper-visual,
+.paper-visual img,
+.paper-visual video,
+.paper-visual iframe,
+.paper-visual embed,
+.paper-desc video,
+.paper-desc iframe,
+.paper-desc embed {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  max-height: 360px; /* prevents very tall media on desktop */
+  object-fit: contain;
+}
+
+/* Smaller cap for the text-column embeds so they don't overcrowd lines */
+.page__content .paper-textual .paper-desc video,
+.page__content .paper-textual .paper-desc iframe,
+.page__content .paper-textual .paper-desc embed {
+  max-height: 300px;
+}
+
+/* On small screens allow media to be taller but remain fluid */
+@media (max-width: 700px) {
+  .paper-visual,
+  .paper-visual img,
+  .paper-visual video,
+  .paper-visual iframe,
+  .paper-desc video,
+  .paper-desc iframe {
+    max-height: none;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* GIFs can be extremely large; cap their displayed size more aggressively
+   and center them inside the visual column. This only affects images that
+   end with .gif to avoid changing other image types. */
+.paper-visual img[src$=".gif"],
+.paper-visual img[src$=".GIF"],
+.paper-visual[src$=".gif"],
+.paper-visual[src$=".GIF"] {
+  /* Force the GIF to take less horizontal space in the flex layout */
+  display: block !important;
+  margin: 0 auto !important;
+  width: auto !important;
+  flex: 0 0 25% !important;    /* make GIF column ~25% of row */
+  max-width: 320px !important; /* absolute cap on wide screens */
+  max-height: 200px !important;/* avoid tall animated GIFs */
+  height: auto !important;
+  object-fit: contain !important;
+}
+
 /* Collapse small spacer divs used in the markup so spacing is minimal */
 .paper-textual > div[style] { height: 0 !important; margin: 0 !important; padding: 0 !important; }
 .paper-textual h3 { margin: 0 0 0.15rem; }

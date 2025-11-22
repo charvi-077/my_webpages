@@ -33,7 +33,7 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/posts">📂 All Posts ({{ site.posts.size }})</a></span>
       </li>
       <li>
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/research">📝 Research Papers ({{ site.categories['논문리뷰'].size }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/research">📝 Research Papers ({{ site.categories['research'].size }})</a></span>
         {% assign fav_tags = "Computer Vision/CV/Computer Vision, 3D Vision/3DV/3D Vision, NLP/NLP/NLP, Audio and Speech Processing/ASP/Audio & Speech, Reinforcement Learning/RL/RL" | split: ", " %}
         {% for fav_tag in fav_tags %}
           {% assign sep = fav_tag | split: "/" %}
@@ -55,7 +55,7 @@
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/programming">💻 Programming ({{ site.categories['프로그래밍'].size }})</a></span>
         <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/study">📒 Study Notes ({{ site.categories['공부'].size }})</a></span>
         <!-- <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/AI소식">🔥 AI소식 ({{ site.categories['AI소식'].size }})</a></span> -->
-        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/games">🎮 Games ({{ site.categories['GAME'].size }})</a></span>
+        <span class="nav__sub-title" v-on:click='togglec()'><a href="/categories/games"> Software Engineerin ({{ site.categories['GAME'].size }})</a></span>
 
         <!-- <span class="nav__sub-title" v-on:click='togglet()'>tags</span>
         <ul v-show="flag_t">
