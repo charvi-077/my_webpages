@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Charvi Mendiratta"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/img/myphoto.jpeg"
   bio              : "3D Computer Vision | Robotics | Deep Learning"
   location         : "California, USA"
   email            : "charvi077@gmail.com"
