@@ -1,12 +1,76 @@
 <!-- start custom head snippets -->
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
-<link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/favicon-16x16.png">
-<link rel="mask-icon" href="{{site.baseurl}}/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+<link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/assets/favicon/sun.png">
+<link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/assets/favicon/sun.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/assets/favicon/sun.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/assets/favicon/sun.png">
+
+<!-- Homepage styles -->
+{% if page.layout == "homepage" %}
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/homepage.css">
+{% endif %}
+
+<!-- Navigation styling -->
+<style>
+.nav__list .nav__sub-title {
+  font-weight: bold;
+  font-size: 0.95em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: block;
+  margin: 0.5rem 0;
+  text-transform: none !important;
+  color: inherit !important;
+  padding-bottom: 0.3rem;
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav__list .nav__sub-title:hover {
+  border-bottom-color: #999;
+}
+
+.nav__list .nav__sub-title a {
+  color: inherit !important;
+  display: block;
+  text-transform: none !important;
+}
+
+.nav__items > li {
+  margin-bottom: 0.5rem;
+}
+
+/* Page title styling */
+.page__title {
+  font-weight: normal;
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+}
+
+/* Main site title styling */
+.site-title {
+  font-family: 'Georgia', 'Garamond', serif !important;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+/* Responsive spacing for homepage on mobile */
+@media (max-width: 768px) {
+  .archive {
+    margin-top: 3rem !important;
+    padding-top: 2rem !important;
+  }
+}
+</style>
+
+<!-- Hide footer follow section on homepage only -->
+{% if page.layout == "homepage" %}
+<style>
+.page__footer-follow {
+  display: none !important;
+}
+</style>
+{% endif %}
 
 <!-- end custom head snippets -->

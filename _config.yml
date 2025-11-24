@@ -20,7 +20,7 @@ title                    : "Charvi Mendiratta"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Charvi Mendiratta"
-description              : "3D Computer Vision | Robotics | Deep Learning"
+description              : "3D Computer Vision \\| Robotics \\| Deep Learning"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,8 +106,8 @@ analytics:
 author:
   name             : "Charvi Mendiratta"
   avatar           : "/assets/img/myphoto.jpeg"
-  bio              : "3D Computer Vision | Robotics | Deep Learning"
-  location         : "California, USA"
+  bio              : "2D-3D Computer Vision \\| Robotics \\| Deep Learning"
+  location         : "Santa Barbara, CA, USA"
   email            : "charvi077@gmail.com"
   links:
     - label: "Email"
@@ -116,40 +116,43 @@ author:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url: "https://twitter.com/"
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url: "https://facebook.com/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/charvi077/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/kimjy99"
+      url: "https://github.com/charvi-077"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@charvimendiratta"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://x.com/charvi077"
 
 # Site Footer
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:charvi077@gmail.com"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/charvi077/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://github.com/charvi-077"
+    - label: "YouTube"
+      icon: "fab fa-fw fa-youtube"
+      url: "https://www.youtube.com/@charvimendiratta"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://x.com/charvi077"
 
 
 # Reading Files
