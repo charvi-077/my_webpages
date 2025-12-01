@@ -272,3 +272,13 @@
   display: block !important;
   margin: 1rem 0 !important;
 }
+
+/* Homepage content sizing */
+p {
+  font-size: 0.9em !important;
+}
+
+a {
+  font-size: 0.9em !important;
+  text-decoration: underline !important;
+}
