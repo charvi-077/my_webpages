@@ -275,10 +275,20 @@
 
 /* Homepage content sizing */
 p {
-  font-size: 0.9em !important;
+  font-size: 0.95em !important;
+  line-height: 1.65 !important;
+  margin: 1rem 0 !important;
 }
 
 a {
-  font-size: 0.9em !important;
+  font-size: 0.95em !important;
   text-decoration: underline !important;
+  line-height: 1.65 !important;
+}
+
+h2 {
+  font-size: 1.2em !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.8rem !important;
+  line-height: 1.5 !important;
 }

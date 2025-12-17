@@ -10,7 +10,7 @@
 .paper-visual {
   /* Reduce visual width so text column gets more room (10% more reduction) */
   flex: 0 0 40%; /* visuals take ~35% on desktop */
-  max-width: calc(100% - 240px); /* leave sufficient room for text */
+  max-width: 350px; /* Fixed max width for consistent sizing */
   min-width: 220px; /* allow visuals to shrink but keep readable */
   height: auto;
   object-fit: contain;
