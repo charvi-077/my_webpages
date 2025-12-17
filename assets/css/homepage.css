@@ -1,0 +1,284 @@
+/* Homepage sidebar: show only avatar, bio, and GitHub link */
+.author__name {
+  display: none !important;
+}
+
+.author-location {
+  display: none;
+}
+
+.author-email {
+  display: none;
+}
+
+.author-social h3 {
+  display: none;
+}
+
+.author-social-links li a .label {
+  display: none;
+}
+
+/* Keep author sidebar content together and centered */
+.sidebar .author__avatar {
+  width: 100% !important;
+  max-width: 250px !important;
+  height: 250px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.sidebar .author__content {
+  text-align: center !important;
+  width: 100% !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+/* Fix sidebar positioning on smaller screens */
+.sidebar {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.sidebar__right {
+  position: relative !important;
+  float: none !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: 300px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.author__avatar a {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: inherit !important;
+  filter: none !important;
+  opacity: 1 !important;
+  cursor: default !important;
+}
+
+.author__avatar a:hover,
+.author__avatar a:focus {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+/* Force sidebar to not apply opacity reduction to avatar */
+.sidebar {
+  opacity: 1 !important;
+}
+
+.sidebar:hover {
+  opacity: 1 !important;
+}
+
+/* Override theme's link hover effects */
+.sidebar a:not(.nav__link):hover {
+  filter: none !important;
+  opacity: 1 !important;
+}
+
+.author__avatar img {
+  width: 100% !important;
+  max-width: 250px !important;
+  height: 250px !important;
+  border-radius: 0 !important;
+  object-fit: cover !important;
+  border: 2px solid #ddd !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
+  display: block !important;
+  opacity: 1 !important;
+}
+
+/* Hide navigation tabs (All posts, research papers, etc.) on homepage sidebar */
+.nav__list {
+  display: none;
+}
+
+/* Fix follow button and social links to render properly */
+.author__urls-wrapper {
+  display: block !important;
+  width: 100% !important;
+  margin: 1rem auto !important;
+  padding: 0 !important;
+}
+
+.author__urls-wrapper button {
+  display: none !important;
+}
+
+.author__urls {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  list-style: none !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  gap: 0.4rem !important;
+  overflow: visible !important;
+}
+
+.author__urls li {
+  display: list-item !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+}
+
+.author__urls a {
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 0.2rem !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  font-size: 1.0em !important;
+  white-space: nowrap !important;
+}
+
+.author__urls i {
+  font-size: 1.15em !important;
+  margin-right: 0.15rem !important;
+}
+
+.author__urls .label {
+  display: inline !important;
+}
+
+/* Hide location from social links on homepage */
+.author__urls li:has(i.fa-map-marker-alt) {
+  display: none !important;
+}
+
+/* Add colors to social icons */
+.author__urls a[href*="github.com"] i {
+  color: #333 !important;
+}
+
+.author__urls a[href*="linkedin.com"] i {
+  color: #0077B5 !important;
+}
+
+.author__urls a[href*="youtube.com"] i {
+  color: #FF0000 !important;
+}
+
+.author__urls a[href*="x.com"] i {
+  color: #000 !important;
+}
+
+.author__urls a[href*="instagram.com"] i {
+  color: #E1306C !important;
+}
+
+.author__urls a[href^="mailto:"] i {
+  color: #EA4335 !important;
+}
+
+/* Ensure bio text is visible and not truncated */
+.author__bio {
+  display: block !important;
+  margin: 0.5rem 0 1.5rem 0 !important;
+  padding: 0 !important;
+  order: 2;
+}
+
+/* Hide the markdown table and show text properly */
+.author__bio table {
+  display: none !important;
+}
+
+.author__bio > * {
+  display: none !important;
+}
+
+.author__bio::after {
+  content: "2D-3D Computer Vision | Robotics | Deep Learning";
+  display: block;
+  font-size: 0.8em;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Add location display below bio */
+.author__content::after {
+  content: "📍 Santa Barbara, CA, USA";
+  display: block;
+  text-align: center;
+  font-size: 0.9em;
+  margin: 0.5rem 0 1rem 0;
+  color: #666;
+}
+
+/* Responsive: make text smaller on mobile */
+@media (max-width: 480px) {
+  .author__bio::after {
+    font-size: 0.7em;
+    line-height: 1.4;
+  }
+  
+  .author__content::after {
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 768px) {
+  .author__bio::after {
+    font-size: 0.75em;
+  }
+  
+  .author__content::after {
+    font-size: 0.85em;
+  }
+}
+
+/* Style main content paragraphs */
+.page__content p {
+  display: block !important;
+  margin: 1rem 0 !important;
+  clear: both !important;
+}
+
+.page__content hr {
+  margin: 1.5rem 0 !important;
+}
+
+/* Style archive content for better spacing */
+.archive {
+  display: block !important;
+}
+
+.archive > * {
+  display: block !important;
+  margin: 1rem 0 !important;
+}
+
+/* Homepage content sizing */
+p {
+  font-size: 0.9em !important;
+}
+
+a {
+  font-size: 0.9em !important;
+  text-decoration: underline !important;
+}

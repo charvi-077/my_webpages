@@ -1,0 +1,17 @@
+{
+  "Begin Equation": {
+    "prefix": "eq",
+    "body": [
+      "$$",
+      "${1}",
+      "$$"
+    ],
+    "description": "LaTeX equation block"
+  },
+  
+  "Inline Math": {
+    "prefix": "m",
+    "body": ["$${1}$$"],
+    "description": "Inline math"
+  }
+}

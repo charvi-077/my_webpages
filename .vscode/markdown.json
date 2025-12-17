@@ -1,0 +1,26 @@
+{
+  "Insert Image": {
+    "prefix": "img",
+    "body": [
+      "<center><img src='{{\"\/assets\/img\/${1:folder}\/${2:filename}.${3:png}\" | relative_url}}' width=\"${4:80}%\"><\/center>",
+      "<center><em>${5:caption}</em></center>"
+    ],
+    "description": "Insert centered image with caption"
+  }, 
+
+  "Block Equation": {
+    "prefix": "eq",
+    "body": [
+      "$$",
+      "${1:equation}",
+      "$$"
+    ],
+    "description": "LaTeX equation block"
+  },
+  
+  "Inline Math": {
+    "prefix": "m",
+    "body": ["$${1:equation}$$"],
+    "description": "Inline math"
+  }
+}
