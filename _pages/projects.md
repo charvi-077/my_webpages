@@ -143,8 +143,8 @@ no_title_link: true
       <div style="height: 0.1em"></div>
       <ul class="paper-points">
         <li>Contributed to BisQue, a web-based platform providing researchers with organizational and quantitative analysis tools for up to 5D image data with flexible metadata facility.</li>
-        <li>Deployed and maintained infrastructure using Kubernetes (K3s) and Docker containerization, enabling seamless execution of multiple ML modules on distributed systems.</li>
-        <li>Developed extensible ML modules leveraging cutting-edge machine learning algorithms for multimodal data analysis and novel research discoveries.</li>
+        <li>Deployed and maintained infrastructure using Kubernetes (K3s) and Docker containerization, enabling execution of multiple deep learning based modules on distributed systems.</li>
+        <li>Developed segmentation modules using existing deep learning algorithms(SAM, SAM2, CellPose3D) for multimodal data analysis (3D Cell Segmentation, Underwater Image Segmentation).</li>
       </ul>
       <div style="height: 0.375em"></div>
       <p style="font-size: 0.85em; color: #666; margin: 0; font-style: italic;"><strong>Team Members:</strong> Connor, Chandrakanth, Amil Khan</p>
