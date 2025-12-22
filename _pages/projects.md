@@ -144,7 +144,7 @@ no_title_link: true
       <ul class="paper-points">
         <li>Contributed to BisQue, a web-based platform providing researchers with organizational and quantitative analysis tools for up to 5D image data with flexible metadata facility.</li>
         <li>Deployed and maintained infrastructure using Kubernetes (K3s) and Docker containerization, enabling execution of multiple deep learning based modules on distributed systems.</li>
-        <li>Developed segmentation modules using existing deep learning algorithms(SAM, SAM2, CellPose3D) for multimodal data analysis (3D Cell Segmentation, Underwater Image Segmentation).</li>
+        <li>Developed segmentation/Object detection modules using existing deep learning algorithms(Yolo, DETR, SAM, SAM2, CellPose3D) for multimodal data analysis (3D Cell Segmentation, Underwater Image Segmentation).</li>
       </ul>
       <div style="height: 0.375em"></div>
       <p style="font-size: 0.85em; color: #666; margin: 0; font-style: italic;"><strong>Team Members:</strong> Connor, Chandrakanth, Amil Khan</p>
