@@ -72,11 +72,28 @@ no_title_link: true
   </div>
 
 
+  <!-- 3D SLAM -->
+  <div class="paper">
+    <img class="paper-visual" src="/assets/projects/3d-slam.gif" alt="3D SLAM">
+    <div class="paper-textual">
+      <h3>3D SLAM with ROS</h3>
+      <div style="height: 0.1em"></div>
+      <ul class="paper-points">
+        <li>Implemented and compared 3D SLAM algorithms including LOAM, LegoLoam and LIO-SAM (LiDAR-Inertial-Odometry-SLAM) with sensor fusion of LiDAR, IMU, and GPS data using ROS framework.</li>
+        <li>Explored NDT (Normal Distributions Transform) based SLAM and localization, working with RSLIDAR and Ouster LiDAR for localization in warehouse and outdoor environments.</li>
+        <li>Worked on bundle adjustment and loop closure detection techniques to improve trajectory consistency and reduce pose estimation drift over long trajectories.</li>
+        <li>Integrated Removert (Removing Moving Objects) for dynamic obstacle removal to improve SLAM  in environments with moving objects and transient features.</li>
+      </ul>
+      <div style="height: 0.375em"></div>
+      <div style="height: 0.375em"></div>
+    </div>
+  </div>
+
   <!-- 2D SLAM -->
   <div class="paper">
     <img class="paper-visual" src="/assets/projects/2dmapping.gif" alt="2D SLAM" style="flex: 0 0 50%; max-width: 450px;">
     <div class="paper-textual">
-      <h3>2D SLAM - Simultaneous Localization and Mapping</h3>
+      <h3>2D SLAM - Simultaneous Localization and Mapping with ROS</h3>
       <div style="height: 0.1em"></div>
       <ul class="paper-points">
         <li>Implemented and compared three major SLAM algorithms (Gmapping, Hector-SLAM, and Cartographer) across multiple environments using ROS ecosystem.</li>
@@ -87,6 +104,21 @@ no_title_link: true
       <div class="paper-links">
         <a href="https://drive.google.com/file/d/1y4Prp6W4tJA9ca0kAKvYfLpIHO9Cndse/view">Report</a>
       </div>
+      <div style="height: 0.375em"></div>
+    </div>
+  </div>
+
+  <!-- Monocular SLAM -->
+  <div class="paper">
+    <img class="paper-visual" src="/assets/projects/vins-fusion2.gif" alt="Monocular SLAM">
+    <div class="paper-textual">
+      <h3>Monocular Visual-Inertial SLAM with ROS</h3>
+      <div style="height: 0.1em"></div>
+      <ul class="paper-points">
+        <li>Implemented VINS-Mono and VINS-Fusion for monocular camera with IMU and camera odometry using ROS framework.</li>
+        <li>Deployed and tested both systems in warehouse environments to evaluate robustness and drift correction.</li>
+      </ul>
+      <div style="height: 0.375em"></div>
       <div style="height: 0.375em"></div>
     </div>
   </div>
@@ -154,6 +186,22 @@ no_title_link: true
         <span class="sep">/</span>
         <a href="https://github.com/UCSB-VRL/bisqueUCSB">Code</a>
       </div>
+      <div style="height: 0.375em"></div>
+    </div>
+  </div>
+
+    <!-- ROS Navigation Stack -->
+  <div class="paper">
+    <img class="paper-visual" src="/assets/projects/nav-stack.gif" alt="ROS Navigation Stack">
+    <div class="paper-textual">
+      <h3>ROS Navigation Stack - Autonomous Robot Navigation</h3>
+      <div style="height: 0.1em"></div>
+      <ul class="paper-points">
+        <li>Configured ROS Navigation Stack with obstacle avoidance, costmaps, and waypoint follower for autonomous mobile robot navigation.</li>
+        <li>Integrated Gmapping for real-time mapping and localization in indoor environments using ROS framework.</li>
+        <li>Simulated and visualized navigation system in Gazebo simulation environment with RViz for trajectory monitoring and debugging.</li>
+      </ul>
+      <div style="height: 0.375em"></div>
       <div style="height: 0.375em"></div>
     </div>
   </div>
